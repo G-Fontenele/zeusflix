@@ -11,7 +11,8 @@
       "videos": [
         {
           "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw",
+          "description": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
         },
         {
           "title": "SEO com React",
@@ -44,8 +45,35 @@
       ]
     },
     {
+      "title": "Eletrônica de Potência",
+      "link": "https://www.youtube.com/channel/UCJKbHtELOOE_molSxbkS51w",
+      "color": "#6BD1FF",
+      "extra_link": {
+        "text": "Instagram PELS & IAS UFRJ",
+        "url": "https://www.instagram.com/pelsias.ufrj/?hl=pt-br"
+      },
+      "videos": [
+        {
+          "title": "MagLev-Cobra: uma breve retrospectiva em tempos de COVID-19",
+          "url": "https://www.youtube.com/watch?v=-AtqHXJmAXM&feature=youtu.be"
+        },
+        {
+          "title": "VENTILADOR PULMONAR de Exceção para COVID -19 (VExCO) da COPPE/UFRJ",
+          "url": "https://www.youtube.com/watch?v=TpPN-XMT43I"
+        },
+        {
+          "title": "Saúde Mental na Quarentena - PELS/IAS UFRJ e SENEL Online",
+          "url": "https://www.youtube.com/watch?v=v0sEhr_lFFA"
+        },
+        {
+          "title": "Webinar - Introdução ao Hardware-in-the-loop",
+          "url": "https://www.youtube.com/watch?v=SWclJRn4CJE"
+        }        
+      ]
+    },
+    {
       "title": "Back End",
-      "color": "#00C86F",
+      "color": "#6BD1FF",
       "extra_link": {
         "text": "Cursos de Back End na Alura",
         "url": "https://www.alura.com.br/cursos-online-programacao"
@@ -75,7 +103,7 @@
     },
     {
       "title": "Data Science e Inteligência Artificial",
-      "color": "#9cd33b",
+      "color": "#6BD1FF",
       "extra_link": {
         "text": "Cursos de Data Science na Alura",
         "url": "https://www.alura.com.br/formacao-data-science"
@@ -101,7 +129,7 @@
     },
     {
       "title": "Filmes",
-      "color": "orange",
+      "color": "#6BD1FF",
       "videos": [
         {
           "title": "Interestellar",
@@ -122,38 +150,8 @@
       ]
     },
     {
-      "title": "Games",
-      "color": "red",
-      "extra_link": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/formacao-jogos-unity"
-      },
-      "videos": [
-        {
-          "title": "Final Fantasy 7",
-          "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
-        },
-        {
-          "title": "Assassins Creed Valhalla",
-          "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
-        },
-        {
-          "title": "God of War 4",
-          "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
-        },
-        {
-          "title": "Resident Evil 8",
-          "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-        },
-        {
-          "title": "Pokémon Let's Go Pikachu/Eevee",
-          "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
-        }
-      ]
-    },
-    {
       "title": "Aprendendo a aprender tecnologia",
-      "color": "#6b5be2",
+      "color": "#6BD1FF",
       "extra_link": {
         "text": "Curso sobre aprendizado na Alura",
         "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
