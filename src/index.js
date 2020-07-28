@@ -4,6 +4,7 @@ import './index.css';
 import Home from './pages/Home';
 import VideoRegister from './pages/register/video';
 import CategoryRegister from './pages/register/category';
+import Error from './pages/error';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ ReactDOM.render(
       <Route path = '/' component = {Home} exact />
       <Route path = '/register/video' component = {VideoRegister} />
       <Route path = '/register/category' component = {CategoryRegister} />
-      <Route component = {() => <div>erro</div>} /> 
+      <Route component = {Error} /> 
 
     </Switch>
   </Router>,
