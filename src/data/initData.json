@@ -55,7 +55,8 @@
       "videos": [
         {
           "title": "MagLev-Cobra: uma breve retrospectiva em tempos de COVID-19",
-          "url": "https://www.youtube.com/watch?v=-AtqHXJmAXM&feature=youtu.be"
+          "url": "https://www.youtube.com/watch?v=-AtqHXJmAXM&feature=youtu.be",
+          "description": "O palestrante convidado será Richard Magdalena Stephan, Engenheiro Eletricista, Professor Titular do Departamento de Engenharia Elétrica da UFRJ, Membro Sênior do IEEE e coordenador do projeto do MagLev-Cobra. Nesse encontro, falaremos sobre o MagLev-Cobra, um veículo para transporte de passageiros, flutuando como um tapete mágico, sem a necessidade de rodas ou de qualquer outra forma de contato com o solo e que tornou-se tecnicamente possível com os avanços tecnológicos dos dias de hoje. "
         },
         {
           "title": "VENTILADOR PULMONAR de Exceção para COVID -19 (VExCO) da COPPE/UFRJ",
