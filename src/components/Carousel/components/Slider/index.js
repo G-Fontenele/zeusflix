@@ -24,16 +24,26 @@ const Container = styled.ul`
     left: 0;
   }
   .slick-next {
-    right: 16px;
+    right: 10px;
   }
+  .slick-slide {
+		opacity:0.4;
+		transition:opacity 1s ease-out;
+	}
+  
+  .slick-active {
+      opacity:1!important;
+      transition:opacity 0.2s ease-in;
+    }
+  
 `;
 
 export const SliderItem = styled.li`
-  margin-right: 16px;
+  margin-right: 10px;
   img {
     margin: 16px;
     width: 298px;
-    height: 197px;
+    height: 170px;
     object-fit: cover;
   }
 `;
@@ -49,7 +59,9 @@ const Slider = ({ children }) => (
       variableWidth: true,
       adaptiveHeight: true,
       autoplay: true,
-      autoplaySpeed: 6000,
+      autoplaySpeed: 4000,
+      pauseOnFocus: true,
+      swipeToSlide: true,
     }}
     >
       {children}

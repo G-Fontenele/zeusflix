@@ -39,6 +39,7 @@ function Home() {
 
       <Carousel
         category={initData.categories[5]}
+        style = {{marginBottom: 50}}
       />      
 
       <Footer />
