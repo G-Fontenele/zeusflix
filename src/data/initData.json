@@ -179,6 +179,38 @@
           "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
         }
       ]
+    },
+    {
+      "title": "Economia",
+      "link": "https://www.youtube.com/user/thigas",
+      "color": "#6BD1FF",
+      "extra_link": {
+        "text": "Canal Financeiro",
+        "url": "https://www.youtube.com/channel/UC6X2Vzr7iM1TyXlozomjOGQ"
+      },
+      "videos": [
+        {
+          "title": "10 Filmes para você entender economia",
+          "url": "https://www.youtube.com/watch?v=bnBZFDVwO5k&list=WL&index=10&t=0s",
+          "description": "Neste vídeo,  vamos listar 10 filmes que te ajudam a entender economia, investimentos e finanças além de explicar as crises que já vivemos e conceitos muito interessantes como, valor da moeda, do tempo e muito mais! "
+        },
+        {
+          "title": "3 SEGREDOS DA MENTE UNIVERSITÁRIA MILIONÁRIA! O 1º segredo é o mais difícil!",
+          "url": "https://www.youtube.com/watch?v=MziFPb2SbUc&list=WL&index=18&t=0s"
+        },
+        {
+          "title": "Ações Baratas com Alto Dividend Yield | BRSR6",
+          "url": "https://www.youtube.com/watch?v=KbV13MGy3js&list=WL&index=26&t=0s"
+        },
+        {
+          "title": "R$16.700 e R$380.000: Quanto rende por mês em FUNDOS IMOBILIARIOS (FIIs)? Dá pra viver de renda?",
+          "url": "https://www.youtube.com/watch?v=CoKzco92uOI"
+        },
+        {
+          "title": "O que esperar dos FUNDOS IMOBILIÁRIOS?! É hora de comprar?",
+          "url": "https://www.youtube.com/watch?v=wAItV1feS6M&list=WL&index=29&t=0s"
+        }        
+      ]
     }
   ]
 }
