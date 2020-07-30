@@ -30,13 +30,15 @@ function CategoryRegister() {
 
   useEffect(() => {
     if(window.location.href.includes('localhost')) {
-      const url = 'http://localhost:8080/categorias'; 
+      const url = 'http://localhost:8000/categories'; 
 
       fetch(url)
        .then(async (serverFeedback) =>{
         if(serverFeedback.ok) {
           const feedback = await serverFeedback.json();
-          setCategories(feedback);
+          setCategories([
+            ...feedback,
+          ]);
           return; 
         }
         throw new Error('Não foi possível pegar os dados');
@@ -98,6 +100,12 @@ function CategoryRegister() {
           Cadastrar
         </Button>
       </form>
+
+      {categories.length === 0 && (
+      <div>
+        Loading...
+      </div>
+      )}
 
       <u1>
         {categories.map((category, index) => (
