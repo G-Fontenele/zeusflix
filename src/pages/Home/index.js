@@ -5,19 +5,36 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 
+let i = 6;
+/*
+let count = 0;
+function videoNumber(){
+  count = count + 1;
+  if (count>10000){
+    count = 0;
+    if (i>6){
+      i = 0;
+    }
+    i = i + 1;
+    return i
+  }
+}
+*/
+
 function Home() {
-  return (
+  return (    
     <div style={{ background: "#141414" }}>
       <Menu />
 
+    
       <BannerMain
-        videoTitle={initData.categories[0].videos[0].title}
-        url={initData.categories[0].videos[0].url}
-        videoDescription={initData.categories[0].videos[0].description}
+        videoTitle={initData.categories[i].videos[0].title}
+        url={initData.categories[i].videos[0].url}
+        videoDescription={initData.categories[i].videos[0].description}
       />
 
       <Carousel
-        ignoreFirstVideo
+        //ignoreFirstVideo
         category={initData.categories[0]}
       />
 

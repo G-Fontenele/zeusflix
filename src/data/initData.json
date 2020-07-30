@@ -45,9 +45,9 @@
       ]
     },
     {
-      "title": "Eletrônica de Potência",
+      "title": "Eletrônica de Potência - PELS & IAS",
       "link": "https://www.youtube.com/channel/UCJKbHtELOOE_molSxbkS51w",
-      "color": "#6BD1FF",
+      "color": "#ff0101",
       "extra_link": {
         "text": "Instagram PELS & IAS UFRJ",
         "url": "https://www.instagram.com/pelsias.ufrj/?hl=pt-br"
@@ -177,6 +177,41 @@
         {
           "title": "Como aprender a programar?",
           "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
+        }
+      ]
+    },
+    {
+      "title": "SENEL",
+      "color": "#fdcc30",
+      "extra_link": {
+        "text": "Site da SENEL",
+        "url": "https://senel.poli.ufrj.br"
+      },
+      "videos": [
+        {
+          "title": "Inovações no Setor Elétrico",
+          "url": "https://www.youtube.com/watch?v=ZrDKpJD5bMI",
+          "description": "Uma apresentação com a ilustríssima Thaís Pacheco Teixeira da EPE (empresa de pesquisa energética). Abordando as mais recentes inovações que estão ocorrendo no setor elétrico."
+        },
+        {
+          "title": "Ventilador Pulmonar - COPPE/UFRJ",
+          "url": "https://www.youtube.com/watch?v=9aDioYwh5zs"
+        },
+        {
+          "title": "Como os profissionais devem se preparar para o 'pós-pandemia'",
+          "url": "https://www.youtube.com/watch?v=r5D-tQf3wBM"
+        },
+        {
+          "title": "Planejamento da Geração distribuída - EPE (Empresa de Pesquisa Energética)",
+          "url": "https://www.youtube.com/watch?v=1LquaQBijpg&t=59s"
+        },
+        {
+          "title": "Saúde Mental na Quarentena PELS IAS UFRJ e SENEL Online",
+          "url": "https://www.youtube.com/watch?v=7kApb46M-XI"
+        },
+        {
+          "title": "A mulher no mercado de trabalho - Ambev",
+          "url": "https://www.youtube.com/watch?v=l38VyOLdn7o"
         }
       ]
     },

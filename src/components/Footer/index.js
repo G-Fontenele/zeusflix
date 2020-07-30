@@ -1,6 +1,7 @@
 import React from 'react';
 import { FooterBase } from './styles';
-import goncaflixLogo from '../../assets/img/goncaflixLogo.png'
+//import goncaflixLogo from '../../assets/img/goncaflixLogo.png'
+import zeusflixLogo from '../../assets/img/zeusflixLogo.png'
 import githubLogo from '../../assets/img/githubLogo.png'
 import linkedinLogo from '../../assets/img/linkedinLogo.png'
 
@@ -9,7 +10,7 @@ function Footer() {
   return (
     <FooterBase>
       <a href='/'>
-        <img class='Logo' src={goncaflixLogo} alt='goncaflix logo'/>
+        <img class='Logo' src={zeusflixLogo} alt='zeusflix logo'/>
       </a>
       <p>
         Projeto Criado durante a
