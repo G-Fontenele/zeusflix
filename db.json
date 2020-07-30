@@ -1,0 +1,16 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Front End",
+            "description": "bacana categoria",
+            "color": "#cbd1ff"
+        },
+        {
+            "id": 2,
+            "name": "Front End",
+            "description": "bacana categoria",
+            "color": "#cbd1ff"
+        }
+    ]
+}

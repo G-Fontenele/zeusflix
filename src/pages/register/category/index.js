@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -27,6 +27,22 @@ function CategoryRegister() {
       eventInfo.target.value,
     );
   }
+
+  useEffect(() => {
+    if(window.location.href.includes('localhost')) {
+      const url = 'http://localhost:8080/categorias'; 
+
+      fetch(url)
+       .then(async (serverFeedback) =>{
+        if(serverFeedback.ok) {
+          const feedback = await serverFeedback.json();
+          setCategories(feedback);
+          return; 
+        }
+        throw new Error('Não foi possível pegar os dados');
+       })
+    }    
+  }, []);
 
   return (
     <PageDefault>
