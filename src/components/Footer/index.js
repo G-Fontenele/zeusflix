@@ -1,6 +1,6 @@
 import React from 'react';
 import { FooterBase } from './styles';
-//import goncaflixLogo from '../../assets/img/goncaflixLogo.png'
+// import goncaflixLogo from '../../assets/img/goncaflixLogo.png'
 import zeusflixLogo from '../../assets/img/zeusflixLogo.png'
 import githubLogo from '../../assets/img/githubLogo.png'
 import linkedinLogo from '../../assets/img/linkedinLogo.png'
