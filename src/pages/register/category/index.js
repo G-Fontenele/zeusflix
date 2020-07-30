@@ -30,9 +30,11 @@ function CategoryRegister() {
 
   useEffect(() => {
     if(window.location.href.includes('localhost')) {
-      const url = 'http://localhost:8000/categories'; 
+      const URL = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8000/categories'
+        : 'https://zeusflix.herokuapp.com/categories'; 
 
-      fetch(url)
+      fetch(URL)
        .then(async (serverFeedback) =>{
         if(serverFeedback.ok) {
           const feedback = await serverFeedback.json();

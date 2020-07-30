@@ -2,14 +2,14 @@
     "categories": [
         {
             "id": 1,
-            "name": "Front End",
-            "description": "bacana categoria",
+            "name": "Eletrônica de Potência",
+            "description": "Destinada a divulgação dos vídeos do PELS & IAS",
             "color": "#cbd1ff"
         },
         {
             "id": 2,
-            "name": "Front End",
-            "description": "bacana categoria",
+            "name": "Controle Clássico",
+            "description": "Teoria e Softwares de Controle",
             "color": "#cbd1ff"
         }
     ]
