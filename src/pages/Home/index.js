@@ -7,8 +7,6 @@ import PageDefault from '../../components/PageDefault';
 
 import { LinearProgress } from '@material-ui/core';
 
-// http://localhost:8000/categories?_embed=videos
-
 let i = 2;
 
 function Home() {
