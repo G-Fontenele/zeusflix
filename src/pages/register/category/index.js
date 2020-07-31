@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import { LinearProgress } from '@material-ui/core';
+
+
 
 function CategoryRegister() {
   const initCategory = {
@@ -21,11 +24,21 @@ function CategoryRegister() {
     });
   }
 
+  const maxCategoryChar = 40;
   function handler(eventInfo) {
     setValue(
       eventInfo.target.getAttribute('name'),
       eventInfo.target.value,
     );
+    if (eventInfo.target.getAttribute('name') === 'name') {
+      if (eventInfo.target.value.length > maxCategoryChar) {
+        eventInfo.target.value = eventInfo.target.value.substring(0, maxCategoryChar - 1);
+        setValue(
+          eventInfo.target.value,
+          eventInfo.target.getAttribute('name'),
+        );
+      }
+    }
   }
 
   useEffect(() => {
@@ -51,8 +64,7 @@ function CategoryRegister() {
   return (
     <PageDefault>
       <h1>
-        Cadastro de Categoria:
-        {values.name}
+        Cadastro de Categoria: {values.name}
       </h1>
 
       <form
@@ -65,8 +77,7 @@ function CategoryRegister() {
           ]);
 
           setValues(initCategory);
-        }}
-      >
+        }}>
 
         <div>
 
@@ -75,16 +86,16 @@ function CategoryRegister() {
             type="text"
             name="name"
             value={values.name}
-            placeholder="Nome da Categoria"
+            // placeholder="Nome da Categoria"
             onChange={handler}
           />
 
           <FormField
             label="Descrição da Categoria"
-            type="text"
+            type="textarea"
             name="description"
             value={values.description}
-            placeholder="Descrição da Categoria"
+            // placeholder="Descrição da Categoria"
             onChange={handler}
           />
 
@@ -93,7 +104,7 @@ function CategoryRegister() {
             type="color"
             name="color"
             value={values.color}
-            placeholder="Cor da Categoria"
+            // placeholder="Cor da Categoria"
             onChange={handler}
           />
         </div>
@@ -103,11 +114,18 @@ function CategoryRegister() {
         </Button>
       </form>
 
+
       {categories.length === 0 && (
       <div>
-        Loading...
+        <div style={{padding: 5}}>
+            <LinearProgress/>
+        </div>
       </div>
       )}
+    
+  
+
+
 
       <u1>
         {categories.map((category, index) => (
