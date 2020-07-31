@@ -78,8 +78,9 @@ function FormField({
   const isTypeTextArea = type === 'textarea';
   const tag = isTypeTextArea ? 'textarea' : 'input';
 
-  const hasValue = value.length;
-
+  const hasValue = Boolean(value.length);
+  // const hasSuggestions = Boolean(suggestions.length);
+  
   return (
     <Wrapper>
       <Label htmlFor={fieldId}>
@@ -92,6 +93,8 @@ function FormField({
           // placeholder={placeholder}
           hasValue={hasValue}
           onChange={onChange}
+          // autoComplete={hasSuggestions ? 'off' : 'on'}
+          // list={hasSuggestions ? `suggestionFor_${fieldId}` : undefined}
         />
         <Label.Text>
           {label}

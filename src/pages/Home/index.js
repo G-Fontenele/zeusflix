@@ -1,69 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from '../../components/Menu';
-import initData from '../../data/initData.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+import categoriesRepository from '../../repositories/categories';
+import PageDefault from '../../components/PageDefault';
 
-let i = 6;
-/*
-let count = 0;
-function videoNumber(){
-  count = count + 1;
-  if (count>10000){
-    count = 0;
-    if (i>6){
-      i = 0;
-    }
-    i = i + 1;
-    return i
-  }
-}
-*/
+import { LinearProgress } from '@material-ui/core';
+
+// http://localhost:8000/categories?_embed=videos
+
+let i = 2;
 
 function Home() {
+
+  const [initData, setInitData] = useState([]);
+
+  useEffect(() => {
+    categoriesRepository.getAllWithVideos()
+    .then((categoriesWithVideos) => {
+      setInitData(categoriesWithVideos);
+     })
+    .catch((error) => {
+      console.log(error.message);
+    })
+  }, []);
+
   return (    
-    <div style={{ background: "#141414" }}>
+    <PageDefault paddingAll={0}>
       <Menu />
 
-    
-      <BannerMain
-        videoTitle={initData.categories[i].videos[0].title}
-        url={initData.categories[i].videos[0].url}
-        videoDescription={initData.categories[i].videos[0].description}
-      />
+      {initData.length === 0 && <div>
+        <div style={{padding: 150}}>
+              <LinearProgress/>
+          </div>
+          </div>}
 
-      <Carousel
-        //ignoreFirstVideo
-        category={initData.categories[0]}
-      />
 
-      <Carousel
-        category={initData.categories[1]}
-      />
+      {initData.map((category, index) => {
+        if (index === 0) {
+          return (
+            <div key={category.id}>
+              <BannerMain
+                videoTitle={initData[i].videos[0].title}
+                url={initData[i].videos[0].url}
+                videoDescription={initData[i].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={initData[0]}
+              />
+            </div>
+          );
+        }
 
-      <Carousel
-        category={initData.categories[2]}
-      />      
-
-      <Carousel
-        category={initData.categories[3]}
-      />      
-
-      <Carousel
-        category={initData.categories[4]}
-      />      
-
-      <Carousel
-        category={initData.categories[5]}
-      />      
-
-      <Carousel
-        category={initData.categories[6]}
-      />      
-
-      <Footer />
-    </div>
+        return (
+          <Carousel
+            key={category.id}
+            category={category}
+          />
+        );
+      })}
+    </PageDefault>
   );
 }
 

@@ -3,43 +3,22 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+
 import { LinearProgress } from '@material-ui/core';
 
-
-
 function CategoryRegister() {
-  const initCategory = {
+  const initValues = {
     name: '',
     description: '',
     color: '',
   };
 
+  const { handler, values, clearForm }= useForm(initValues);
+
   const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(initCategory);
 
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value, // 'name': valor
-    });
-  }
 
-  const maxCategoryChar = 40;
-  function handler(eventInfo) {
-    setValue(
-      eventInfo.target.getAttribute('name'),
-      eventInfo.target.value,
-    );
-    if (eventInfo.target.getAttribute('name') === 'name') {
-      if (eventInfo.target.value.length > maxCategoryChar) {
-        eventInfo.target.value = eventInfo.target.value.substring(0, maxCategoryChar - 1);
-        setValue(
-          eventInfo.target.value,
-          eventInfo.target.getAttribute('name'),
-        );
-      }
-    }
-  }
 
   useEffect(() => {
     if(window.location.href.includes('localhost')) {
@@ -76,7 +55,7 @@ function CategoryRegister() {
             values,
           ]);
 
-          setValues(initCategory);
+          clearForm(initValues);
         }}>
 
         <div>
@@ -114,14 +93,15 @@ function CategoryRegister() {
         </Button>
       </form>
 
-
-      {categories.length === 0 && (
-      <div>
-        <div style={{padding: 5}}>
-            <LinearProgress/>
+      <div style={{padding: 10}}>
+        {categories.length === 0 && (
+        <div>
+          <div style={{padding: 5}}>
+              <LinearProgress/>
+          </div>
         </div>
+        )}
       </div>
-      )}
     
   
 
@@ -129,8 +109,8 @@ function CategoryRegister() {
 
       <u1>
         {categories.map((category, index) => (
-          <li key={`${category}${index}`}>
-            {category.name}
+          <li key={`${category.title}${index}`}>
+            {category.title}
           </li>
         ))}
       </u1>
