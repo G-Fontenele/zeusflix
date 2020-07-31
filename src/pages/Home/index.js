@@ -7,11 +7,19 @@ import PageDefault from '../../components/PageDefault';
 
 import { LinearProgress } from '@material-ui/core';
 
-let i = 2;
+
+function getRandomArbitrary(min, max) {
+  return parseInt(Math.random() * (max - min) + min);
+}
+
+
 
 function Home() {
-
   const [initData, setInitData] = useState([]);
+
+  let m = getRandomArbitrary(0,initData.length);
+
+
 
   useEffect(() => {
     categoriesRepository.getAllWithVideos()
@@ -39,9 +47,9 @@ function Home() {
           return (
             <div key={category.id}>
               <BannerMain
-                videoTitle={initData[i].videos[0].title}
-                url={initData[i].videos[0].url}
-                videoDescription={initData[i].videos[0].description}
+                videoTitle={initData[m].videos[0].title}
+                url={initData[m].videos[0].url}
+                videoDescription={initData[m].videos[0].description}
               />
               <Carousel
                 ignoreFirstVideo

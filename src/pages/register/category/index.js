@@ -7,6 +7,8 @@ import useForm from '../../../hooks/useForm';
 
 import { LinearProgress } from '@material-ui/core';
 
+import categoriesRepository from '../../../repositories/categories';
+
 function CategoryRegister() {
   const initValues = {
     name: '',
@@ -48,14 +50,18 @@ function CategoryRegister() {
 
       <form
         style={{ background: values.color }}
-        onSubmit={function handleSubmit(eventInfo) {
-          eventInfo.preventDefault();
-          setCategories([
-            ...categories,
-            values,
-          ]);
-
-          clearForm(initValues);
+        onSubmit={(event) => {
+          event.preventDefault();
+          categoriesRepository.create({
+            title: values.title,
+            url: values.url,
+            description: values.description,
+          })
+          .then(() => {
+            console.log('Categoria cadastrado com sucesso!');
+            console.log(categories);
+            clearForm();
+          });
         }}>
 
         <div>
@@ -88,7 +94,7 @@ function CategoryRegister() {
           />
         </div>
 
-        <Button>
+        <Button type='submit'>
           Cadastrar
         </Button>
       </form>

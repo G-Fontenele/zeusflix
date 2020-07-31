@@ -18,6 +18,7 @@ function VideoRegister() {
   const { handler, values } = useForm({
     title: '',
     url: '',
+    description: '',
     category: '',
   });
 
@@ -42,6 +43,7 @@ function VideoRegister() {
         videosRepository.create({
           title: values.title,
           url: values.url,
+          description: values.description,
           categoryId: categoryChoice.id,
         })
         .then(() => {
@@ -62,6 +64,14 @@ function VideoRegister() {
           label='URL'
           name='url'
           value={values.url}
+          onChange={handler}
+        />
+
+        <FormField
+          label='Descrição do Vídeo'
+          type="textarea"
+          name='description'
+          value={values.description}
           onChange={handler}
         />
 

@@ -44,6 +44,10 @@
         "text": "Escute Eng & Tec no Spotify",
         "url": "https://open.spotify.com/show/1rHFImFCITi71i7tmFKoqe"
       }
+    },
+    {
+      "description": "Canal Didático e Divertido pra te fazer entender Redes Neurais",
+      "id": 6
     }
   ],
   "videos": [
@@ -199,6 +203,13 @@
       "url": "https://www.youtube.com/watch?v=qs735gBFgLQ",
       "categoryId": 3,
       "id": 21
+    },
+    {
+      "title": "Cursos Online PES: AutoCAD #1",
+      "url": "https://www.youtube.com/watch?v=jUrRtEImzVU&list=PLNV378Qnnq0fXqLfRo3rOKOX_TKPkwvqu&index=6",
+      "description": "Hoje uma aula para que você consiga ter o AutoCAD em casa. E no próximo vídeo começamos a usar o programa. Espero que gostem desse curso.",
+      "categoryId": 3,
+      "id": 22
     }
   ]
 }
