@@ -18,7 +18,7 @@ function Home() {
   const [initData, setInitData] = useState([]);
 
   let m = getRandomArbitrary(0,initData.length);
-
+  m = 1;
 
 
   useEffect(() => {

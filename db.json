@@ -46,8 +46,22 @@
       }
     },
     {
-      "description": "Canal Didático e Divertido pra te fazer entender Redes Neurais",
-      "id": 6
+      "id": 6,
+      "title": "Devagar pra eu entender",
+      "color": "#390290",
+      "extra_link": {
+        "text": "Canal no Youtube",
+        "url": "https://www.youtube.com/channel/UCJ-dQocD90CQtsTg9PXyCyA/featured"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Memes UFRJ",
+      "color": "#999",
+      "extra_link": {
+        "text": "Seja Feliz no ZEUSFLIX",
+        "url": "/"
+      }
     }
   ],
   "videos": [
@@ -210,6 +224,55 @@
       "description": "Hoje uma aula para que você consiga ter o AutoCAD em casa. E no próximo vídeo começamos a usar o programa. Espero que gostem desse curso.",
       "categoryId": 3,
       "id": 22
+    },
+    {
+      "title": "Redes Neurais do Zero: Introdução",
+      "url": "https://www.youtube.com/watch?v=OlIOgMIwNMk",
+      "description": "Primeiro vídeo da série sobre Redes Neurais! \nAqui a gente ensina do ZERO e na prática! \n#redesneurais #inteligenciaartificial #datascience #python",
+      "categoryId": 6,
+      "id": 23
+    },
+    {
+      "title": "Redes Neurais do Zero: Perceptron e Neurônio",
+      "url": "https://www.youtube.com/watch?v=UPrTpJXE09U&t=1s",
+      "description": "Segundo vídeo da série sobre Redes Neurais! \nHoje apresentamos o elemento básico da rede neural: O neurônio!\n\n",
+      "categoryId": 6,
+      "id": 24
+    },
+    {
+      "title": "Redes Neurais do Zero: Arquitetura e Implementação",
+      "url": "https://www.youtube.com/watch?v=ADX54nF-Fgs",
+      "description": "Terceiro vídeo da série sobre Redes Neurais! \nHoje apresentamos nossa primeira arquitetura de rede e as primeiras linhas de programação!",
+      "categoryId": 6,
+      "id": 25
+    },
+    {
+      "title": "Hitler e a P1 de Cálculo 3",
+      "url": "https://www.youtube.com/watch?v=K7pZ2AEyNoE",
+      "description": "Hitler discute com seus amiguinhos sobre a P1 de 2015.1 de Cálculo 3 na UFRJ.",
+      "categoryId": 7,
+      "id": 26
+    },
+    {
+      "title": "Cálculo 3 - Tróia",
+      "url": "https://www.youtube.com/watch?v=q9jtuEYr8jE",
+      "description": "Período a período. A batalha continua.",
+      "categoryId": 7,
+      "id": 27
+    },
+    {
+      "title": "Anatoli Leontiev - Cálculo III - UFRJ - 18/04/2013 (com legenda)",
+      "url": "https://www.youtube.com/watch?v=n6I60liR9e0",
+      "description": "",
+      "categoryId": 7,
+      "id": 28
+    },
+    {
+      "title": "Anatoli Leontiev - Cálculo III - UFRJ - 18/04/2013 - Dublado",
+      "url": "https://www.youtube.com/watch?v=YncSRhh3ST4",
+      "description": "",
+      "categoryId": 7,
+      "id": 29
     }
   ]
 }
