@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "username": "email@email.com",
+      "password": "12345678"
+    }
+  ],
   "categories": [
     {
       "id": 1,

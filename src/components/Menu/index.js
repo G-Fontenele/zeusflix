@@ -13,6 +13,10 @@ function Menu() {
         <img className="Logo" src={zeusflixLogo} alt="zeusflix logo" />
       </Link>
 
+      <Button style={{marginLeft: 730}} as={Link} className="ButtonLink" to="/user/login">
+        Entrar
+      </Button>
+
       <Button as={Link} className="ButtonLink" to="/register/video">
         Novo Vídeo
       </Button>
