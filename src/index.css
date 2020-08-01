@@ -29,14 +29,15 @@
   ::-webkit-scrollbar{
     overflow: auto;
     display: flex;
-    width: 0.4em;
+    width: 0.2em;
   }
   ::-webkit-scrollbar-track{
     border-radius: 10px;
+    background-color: var(--black);
     -webkit-box-shadow: var(--blackLighter);
   }
   ::-webkit-scrollbar-thumb{
-    background-image: linear-gradient(var(--primary),var(--black));
+    background-image: linear-gradient(var(--primary),var(--blackLighter));
     border-radius: 10px;
     outline: 1px solid slategrey;
   }
