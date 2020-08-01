@@ -52,7 +52,7 @@ function VideoRegister() {
           console.log(categories);
           history.push('/');
         });
-        // alert('Vídeo Cadastrado com sucesso!');
+        alert('Vídeo Cadastrado com sucesso!');
       }}>
         <FormField
           label='Título do Vídeo'

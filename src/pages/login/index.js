@@ -5,13 +5,12 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
 
-import { LinearProgress } from '@material-ui/core';
+// import { LinearProgress } from '@material-ui/core';
 
-import categoriesRepository from '../../../repositories/categories';
+// import categoriesRepository from '../../../repositories/categories';
 
 
-function CategoryRegister() {
-
+function Login() {
   const initValues = {
     title: '',
     description: '',
@@ -20,20 +19,33 @@ function CategoryRegister() {
       text: '',
       url: '',
     },
-  }
+  };
 
-  const { handler, values, clearForm } = useForm(initValues);
+  const { handler, values, clearForm }= useForm(initValues);
 
   const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    categoriesRepository
-      .getAll()
-      .then((categoriesFromServer) => {
-        setCategories(categoriesFromServer);
-      });
-  }, []);
 
+
+  useEffect(() => {
+    if(window.location.href.includes('localhost')) {
+      const URL_TOP = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8000/users'
+        : 'https://zeusflix.herokuapp.com/users'; 
+
+      fetch(URL_TOP)
+       .then(async (serverFeedback) =>{
+        if(serverFeedback.ok) {
+          const feedback = await serverFeedback.json();
+          setCategories([
+            ...feedback,
+          ]);
+          return; 
+        }
+        throw new Error('Não foi possível pegar os dados');
+       })
+    }    
+  }, []);
 
   return (
     <PageDefault>
@@ -43,13 +55,13 @@ function CategoryRegister() {
 
       <form
         style={{ background: values.color }}
-        onSubmit={(event) => {
+        onSubmit={function handler(event) {
           event.preventDefault();
           setCategories([
             ...categories,
             values,
           ]);
-          categoriesRepository.create({
+           categoriesRepository.create({
             title: values.title,
             url: values.url,
             description: values.description,
@@ -61,8 +73,6 @@ function CategoryRegister() {
           .then(() => {
             console.log('Categoria cadastrado com sucesso!');
             console.log(categories);
-            // history.push('/');
-            alert('Categoria Cadastrado com sucesso!');
             clearForm();
           });
         }}>
@@ -151,4 +161,4 @@ function CategoryRegister() {
   );
 }
 
-export default CategoryRegister;
+export default Login;

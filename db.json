@@ -12,7 +12,7 @@
     {
       "id": 2,
       "title": "SENEL - Semana da Engenharia Elétrica da UFRJ",
-      "color": "#fdcc30",
+      "color": "#F7B733",
       "extra_link": {
         "text": "Site da SENEL",
         "url": "https://senel.poli.ufrj.br"
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "title": "SPE - Society of Petroleum Engineers UFRJ",
-      "color": "#121416",
+      "color": "#373737",
       "extra_link": {
         "text": "Canal Capítulo SPE UFRJ",
         "url": "https://www.youtube.com/user/capitulospeufrj"
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "title": "Devagar pra eu entender",
-      "color": "#390290",
+      "color": "#471F76",
       "extra_link": {
         "text": "Canal no Youtube",
         "url": "https://www.youtube.com/channel/UCJ-dQocD90CQtsTg9PXyCyA/featured"
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "title": "Memes UFRJ",
-      "color": "#999",
+      "color": "#FF3B3F",
       "extra_link": {
         "text": "Seja Feliz no ZEUSFLIX",
         "url": "/"
