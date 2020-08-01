@@ -17,6 +17,8 @@ const Main = styled.main`
     `}
   `;
 
+  
+  
 function PageDefault({ children, paddingAll }) {
   return(
       <>

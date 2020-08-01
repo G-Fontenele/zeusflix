@@ -25,6 +25,29 @@
     color: inherit;
   } 
 
+
+  ::-webkit-scrollbar{
+    overflow: auto;
+    display: flex;
+    width: 0.4em;
+  }
+  ::-webkit-scrollbar-track{
+    border-radius: 10px;
+    -webkit-box-shadow: var(--blackLighter);
+  }
+  ::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(var(--primary),var(--black));
+    border-radius: 10px;
+    outline: 1px solid slategrey;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-image: linear-gradient(var(--primary), var(black));
+    outline: 1px solid slategrey;
+  }
+  ::-webkit-scrollbar-track-piece{
+    border-radius: 10px;
+  }
+
   #root {
     min-height: calc(100vh - var(--bodyPaddingTop));
     display: flex;
