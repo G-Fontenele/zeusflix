@@ -14,7 +14,7 @@ function Footer() {
       <p>
         Projeto Criado durante a
         {' '}
-        <a href="https://www.https://github.com/imersao-alura/aluraflix.com.br/">
+        <a href="https://github.com/G-Fontenele/zeusflix">
           Imersão React da Alura
         </a>
       </p>
@@ -22,13 +22,13 @@ function Footer() {
         style={{ padding: 10 }}
         href="https://github.com/G-Fontenele"
       >
-        <img style={{ flex: 0.5, width: 80, padding: 10 }} className="Logo" src={githubLogo} alt="github" />
+        <img style={{ flex: 0.5, width: 50, padding: 10 }} className="Logo" src={githubLogo} alt="github" />
       </a>
       <a
         style={{ padding: 10 }}
         href="https://www.linkedin.com/in/gon%C3%A7alofontenele/"
       >
-        <img style={{ flex: 0.5, width: 80, padding: 10 }} className="Logo" src={linkedinLogo} alt="linkedin" />
+        <img style={{ flex: 0.5, width: 50, padding: 10 }} className="Logo" src={linkedinLogo} alt="linkedin" />
       </a>
     </FooterBase>
   );

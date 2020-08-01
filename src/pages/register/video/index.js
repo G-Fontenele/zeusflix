@@ -9,6 +9,7 @@ import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categories';
 
 
+
 function VideoRegister() {
   const history = useHistory();
   const [categories, setCategories] = useState([]);
