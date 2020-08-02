@@ -14,16 +14,14 @@ const VideoPreviewContainer = styled.a`
   overflow: hidden;
   cursor: pointer;
   color: white;
-  flex: 1;
-  height: 50vh;
-  width: 50%;
+  flex: 0 0 300px;
+  width: 300px;
+  height: 170px;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
   align-items: center;
-  padding: 10px;
 
 
   transition: opacity .3s;

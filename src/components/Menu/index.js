@@ -13,7 +13,7 @@ function Menu() {
         <img className="Logo" src={zeusflixLogo} alt="zeusflix logo" />
       </Link>
 
-      <ButtonMenu style={{marginLeft: 730}} as={Link} className="ButtonLink" to="/user/login">
+      <ButtonMenu as={Link} className="ButtonLink" to="/user/login">
         Entrar
       </ButtonMenu>
 

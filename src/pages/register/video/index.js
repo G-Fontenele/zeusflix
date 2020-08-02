@@ -31,6 +31,13 @@ function VideoRegister() {
       });
   }, []);
 
+  function urlIsValid(url) {
+    if (url.match('youtube.com')){
+      return (true);
+    }
+    return(false);
+  };
+
   return(
     <PageDefault>
       <h1>Cadastro de Vídeo: {values.title}</h1>
@@ -55,11 +62,13 @@ function VideoRegister() {
         alert('Vídeo Cadastrado com sucesso!');
       }}>
 
-        <VideoPreview 
-          videoTitle={values.title}
-          videoURL={values.url}
-        />
-
+        {urlIsValid(values.url) && (      
+          <VideoPreview 
+            videoTitle={values.title || ''}
+            videoURL={values.url}
+          />
+        )}
+        
         <div style={{padding: 20}}/>
 
         <FormField
