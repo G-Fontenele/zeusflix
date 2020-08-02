@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import ColoredCircularProgress from '../../../components/Progress/ColoredCircularProgress';
+
 import useForm from '../../../hooks/useForm';
-
-import { LinearProgress } from '@material-ui/core';
-
 import categoriesRepository from '../../../repositories/categories';
 
 
@@ -125,7 +124,7 @@ function CategoryRegister() {
         {categories.length === 0 && (
         <div>
           <div style={{padding: 5}}>
-              <LinearProgress/>
+              <ColoredCircularProgress />
           </div>
         </div>
         )}

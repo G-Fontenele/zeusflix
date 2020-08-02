@@ -5,7 +5,8 @@ import Carousel from '../../components/Carousel';
 import categoriesRepository from '../../repositories/categories';
 import PageDefault from '../../components/PageDefault';
 
-import { LinearProgress } from '@material-ui/core';
+import ColoredCircularProgress from '../../components/Progress/ColoredCircularProgress/index';
+import ColoredLinearProgress from '../../components/Progress/ColoredLinearProgress/index';
 
 
 function getRandomArbitrary(min, max) {
@@ -35,10 +36,9 @@ function Home() {
       <Menu />
 
       {initData.length === 0 && <div>
-        <div style={{padding: 150}}>
-              <LinearProgress/>
-          </div>
-          </div>}
+        <ColoredCircularProgress />
+        <div style={{padding: 250}} />
+        </div>}
 
 
       {initData.map((category, index) => {
