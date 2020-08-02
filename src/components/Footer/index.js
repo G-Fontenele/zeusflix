@@ -1,9 +1,12 @@
 import React from 'react';
 import { FooterBase } from './styles';
+import { Link } from 'react-router-dom';
+
 // import goncaflixLogo from '../../assets/img/goncaflixLogo.png'
 import zeusflixLogo from '../../assets/img/zeusflixLogo.png';
 import githubLogo from '../../assets/img/githubLogo.png';
 import linkedinLogo from '../../assets/img/linkedinLogo.png';
+import ButtonMenu from '../Button/ButtonMenu';
 
 function Footer() {
   return (
@@ -11,6 +14,13 @@ function Footer() {
       <a href="/">
         <img className="Logo" src={zeusflixLogo} alt="zeusflix logo" />
       </a>
+      
+      <div style={{padding:5}} >
+        <ButtonMenu as={Link} className="ButtonLink" to="/user/login">
+          Entrar
+        </ButtonMenu>
+      </div>
+
       <p>
         Projeto Criado durante a
         {' '}
