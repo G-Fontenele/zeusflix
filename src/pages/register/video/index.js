@@ -7,6 +7,7 @@ import Button from '../../../components/Button/index';
 
 import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categories';
+import VideoPreview from '../../../components/VideoPreview';
 
 
 
@@ -68,6 +69,8 @@ function VideoRegister() {
           onChange={handler}
         />
 
+
+
         <FormField
           label='Descrição do Vídeo'
           type="textarea"
@@ -83,6 +86,15 @@ function VideoRegister() {
           onChange={handler}
           suggestions={categoryTitles}
         />
+
+
+        <VideoPreview 
+          videoTitle={values.title}
+          videoURL={values.url}
+        />
+      
+
+        <div style={{padding: 20}}/>
 
         <Button type='submit'>
           Cadastrar
