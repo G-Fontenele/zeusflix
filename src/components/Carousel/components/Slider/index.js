@@ -39,7 +39,7 @@ const Container = styled.ul`
 `;
 
 export const SliderItem = styled.li`
-  margin-right: 4px;
+  margin-right: 2px;
   img {
     margin: 16px;
     width: 298px;

@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const VideoCardContainer = styled.a`
-  border: 2px solid;
-  border-radius: 20px;
+  border-radius: 0px;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -13,7 +12,6 @@ export const VideoCardContainer = styled.a`
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
-  border-radius: 2px;
   position: relative;
   display: flex;
   align-items: flex-end;
