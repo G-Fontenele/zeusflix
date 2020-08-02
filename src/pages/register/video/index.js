@@ -3,13 +3,12 @@ import PageDefault from '../../../components/PageDefault';
 import { Link, useHistory } from 'react-router-dom';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField/index';
-import Button from '../../../components/Button/index';
 
 import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categories';
 import VideoPreview from '../../../components/VideoPreview';
 
-
+import ButtonRegister from '../../../components/Button/ButtonRegister/index'
 
 function VideoRegister() {
   const history = useHistory();
@@ -55,6 +54,14 @@ function VideoRegister() {
         });
         alert('Vídeo Cadastrado com sucesso!');
       }}>
+
+        <VideoPreview 
+          videoTitle={values.title}
+          videoURL={values.url}
+        />
+
+        <div style={{padding: 20}}/>
+
         <FormField
           label='Título do Vídeo'
           name='title'
@@ -88,22 +95,16 @@ function VideoRegister() {
         />
 
 
-        <VideoPreview 
-          videoTitle={values.title}
-          videoURL={values.url}
-        />
-      
-
-        <div style={{padding: 20}}/>
-
-        <Button type='submit'>
+        <ButtonRegister type='submit'>
           Cadastrar
-        </Button>
+        </ButtonRegister>
       </form>
 
-      <Link to = '/register/category'>
-        Cadastrar Categoria
-      </Link>
+      <div style={{paddingTop: 20, paddingBottom: 30}}>
+        <Link style={{fontWeight: 'bold'}} to = '/register/category'>
+          Cadastrar Categoria
+        </Link>
+      </div>
     </PageDefault>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+import ButtonRegister from '../../../components/Button/ButtonRegister/index';
 import useForm from '../../../hooks/useForm';
 
 // import { LinearProgress } from '@material-ui/core';
@@ -86,9 +86,9 @@ function Login() {
 
         </div>
 
-        <Button type="submit">
+        <ButtonRegister type="submit">
           Entrar
-        </Button>
+        </ButtonRegister>
       </form>
 
       <div style={{paddingTop: 10, paddingBottom: 50}}>

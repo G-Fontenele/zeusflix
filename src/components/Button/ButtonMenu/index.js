@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const ButtonMenu = styled.button`
     color: var(--white);
     border: 1px solid var(--white);
     background: var(--primary);
@@ -21,4 +21,4 @@ const Button = styled.button`
     }
 `;
 
-export default Button;
+export default ButtonMenu;

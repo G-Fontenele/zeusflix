@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+import ButtonRegister from '../../../components/Button/ButtonRegister/index';
 import useForm from '../../../hooks/useForm';
 
 // import { LinearProgress } from '@material-ui/core';
@@ -96,9 +96,9 @@ function RegisterUser() {
 
         </div>
 
-        <Button type="submit">
+        <ButtonRegister type="submit">
           Inscrever-se
-        </Button>
+        </ButtonRegister>
       </form>
 
     </PageDefault>

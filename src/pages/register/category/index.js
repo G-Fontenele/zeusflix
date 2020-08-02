@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+import ButtonRegister from '../../../components/Button/ButtonRegister/index';
 import ColoredCircularProgress from '../../../components/Progress/ColoredCircularProgress';
 
 import useForm from '../../../hooks/useForm';
@@ -115,9 +115,9 @@ function CategoryRegister() {
           />
         </div>
 
-        <Button type='submit'>
+        <ButtonRegister type='submit'>
           Cadastrar
-        </Button>
+        </ButtonRegister>
       </form>
 
       <div style={{padding: 10}}>
