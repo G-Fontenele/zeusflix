@@ -25,7 +25,7 @@
     color: inherit;
   } 
 
-  
+
   ::-webkit-scrollbar{
     overflow: auto;
     display: flex;

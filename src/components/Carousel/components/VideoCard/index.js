@@ -1,6 +1,8 @@
 import React from 'react';
 import { VideoCardContainer } from './styles';
 
+const playerURL = 'localhost:3000/player';
+
 function getYouTubeId(youtubeURL) {
   return youtubeURL
     .replace(

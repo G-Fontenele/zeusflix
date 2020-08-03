@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import Home from './pages/Home';
 import VideoRegister from './pages/register/video';
 import CategoryRegister from './pages/register/category';
 import Login from './pages/user/login/index';
 import registerUser from './pages/user/register';
 import Error from './pages/error';
+import PlayerPage from './pages/player';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -19,6 +21,8 @@ ReactDOM.render(
       <Route path = '/' component = {Home} exact />
       <Route path = '/register/video' component = {VideoRegister} />
       <Route path = '/register/category' component = {CategoryRegister} />
+      {/*<Route path = '/player' component = {PlayerPage({title, url})} />*/}
+      <Route exact path='/player' render={(props) => <PlayerPage {...props} title={`Props through render`} url={'https://www.youtube.com/watch?v=_nBlN9yp9R8&list=WL&index=2'}/>} />
       <Route path = '/user/login' component = {Login} />
       <Route path = '/user/register' component = {registerUser} />
       <Route component = {Error} /> 
