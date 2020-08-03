@@ -69,6 +69,16 @@
         "text": "Seja Feliz no ZEUSFLIX",
         "url": "/"
       }
+    },
+    {
+      "title": "Goals & Skills Comps",
+      "description": "Lances para ser feliz lembrando do futebol",
+      "color": "#1591c6",
+      "extra_link": {
+        "text": "Canal Da Arquibancada",
+        "url": "https://www.youtube.com/channel/UCZiSNX9sOSfUdTD9_kNxuBA?view_as=subscriber"
+      },
+      "id": 8
     }
   ],
   "videos": [
@@ -280,6 +290,20 @@
       "description": "",
       "categoryId": 7,
       "id": 29
+    },
+    {
+      "title": "NEYMAR CHEGANDO DE MOICANO, JUJU, JBL E PISANTE I PSG x Saint Étienne",
+      "url": "https://www.youtube.com/watch?v=wfUrDxfzB3w",
+      "description": "Neymar Chegando preparado de Moicano e sua JBL.\n\n#Neymar #jbl #moicano #skills #psg #santos #juliet",
+      "categoryId": 8,
+      "id": 30
+    },
+    {
+      "title": "Quando o NEYMAR jogava de MOICANO - Neymar Jr Skills | HD",
+      "url": "https://www.youtube.com/watch?v=XwEFrsNif6Y",
+      "description": "Como o NEYMAR jogava muito na época do SANTOS. Com o moicano no PSG a Champions já era.\n\n#futebol #skills #neymar #neymarjr #santos #moicano\n",
+      "categoryId": 8,
+      "id": 31
     }
   ]
 }

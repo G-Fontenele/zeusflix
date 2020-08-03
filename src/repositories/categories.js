@@ -20,6 +20,19 @@ function create(categoryObject) {
     });
 }
 
+function remove(id: number) {
+    return fetch(`${URL_CATEGORIES}/${id}`, {
+        method: 'DELETE',
+    })
+    .then(async (serverFeedback) =>{
+     if(serverFeedback.ok) {
+       const feedback = await serverFeedback.json();
+       return feedback;
+    }
+     throw new Error('Not able reaching data');
+    });
+}
+
 function getAll() {
     return fetch(`${URL_CATEGORIES}`)
     .then(async (serverFeedback) =>{
@@ -46,4 +59,5 @@ export default {
     getAllWithVideos,
     getAll,
     create,
+    remove,
 };

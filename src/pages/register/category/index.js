@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import ButtonRegister from '../../../components/Button/ButtonRegister/index';
 import ColoredCircularProgress from '../../../components/Progress/ColoredCircularProgress';
+import {
+  List,
+  ListItem,
+  ListLine,
+  ListCommand,
+  Color,
+  ButtonRemove 
+  } from'../../../components/List/index';
 
 import useForm from '../../../hooks/useForm';
 import categoriesRepository from '../../../repositories/categories';
-
+import DeleteIcon from '@material-ui/icons/Delete';
+import { SvgIcon } from '@material-ui/core';
 
 function CategoryRegister() {
 
@@ -33,6 +42,20 @@ function CategoryRegister() {
       });
   }, []);
 
+  const removeCategory = (categoryId) => {
+    categoriesRepository
+      .remove(categoryId)
+      .then(() => {
+        setCategories(
+          categories
+            .filter((category) => category.id !== categoryId)
+            .map((c) => c)
+        )
+        clearForm()
+      })
+      .catch(() => {
+      })
+  }
 
   return (
     <PageDefault>
@@ -52,13 +75,14 @@ function CategoryRegister() {
             title: values.title,
             url: values.url,
             description: values.description,
+            color: values.color,
             extra_link: {
               text: values.extra_text,
               url: values.extra_url,
             },
           })
           .then(() => {
-            console.log('Categoria cadastrado com sucesso!');
+            console.log('category cadastrado com sucesso!');
             console.log(categories);
             // history.push('/');
             alert('Categoria Cadastrado com sucesso!');
@@ -69,20 +93,20 @@ function CategoryRegister() {
         <div>
 
           <FormField
-            label="Nome da Categoria"
+            label="Nome da categoria"
             type="text"
             name="title"
             value={values.title}
-            // placeholder="Nome da Categoria"
+            // placeholder="Nome da category"
             onChange={handler}
           />
 
           <FormField
-            label="Descrição da Categoria"
+            label="Descrição da categoria"
             type="textarea"
             name="description"
             value={values.description}
-            // placeholder="Descrição da Categoria"
+            // placeholder="Descrição da category"
             onChange={handler}
           />
 
@@ -91,7 +115,7 @@ function CategoryRegister() {
             type="color"
             name="color"
             value={values.color}
-            // placeholder="Cor da Categoria"
+            // placeholder="Cor da category"
             onChange={handler}
           />
 
@@ -101,7 +125,7 @@ function CategoryRegister() {
             type="text"
             name="extra_text"
             value={values.extra_text}
-            // placeholder="Cor da Categoria"
+            // placeholder="Cor da category"
             onChange={handler}
           />
 
@@ -110,7 +134,7 @@ function CategoryRegister() {
             type="text"
             name="extra_url"
             value={values.extra_url}
-            // placeholder="Cor da Categoria"
+            // placeholder="Cor da category"
             onChange={handler}
           />
         </div>
@@ -137,14 +161,33 @@ function CategoryRegister() {
       </div>
 
 
+      <List>
+            {categories.map((category, index) => (
+              <ListItem key={index}>
+                <ListLine >
+                  <Color color={category.color} />
+                    <span>{category.title}</span>{' '}
+                </ListLine>
+                <ListCommand>
+                  <ButtonRemove
+                    style={{height: '1.5rem'}}
+                    onClick={() => removeCategory(category.id || 0)}
+                  >
+                    <SvgIcon component={DeleteIcon} />
+                  </ButtonRemove>
+                </ListCommand>
+              </ListItem>
+            ))}
+          </List>
 
-      <u1 style={{padding: 20}}>
+
+{/*       <u1 style={{padding: 20}}>
         {categories.map((category, index) => (
           <li key={`${category.title}${index}`}>
             {category.title}
           </li>
         ))}
-      </u1>
+      </u1> */}
 
     </PageDefault>
   );
