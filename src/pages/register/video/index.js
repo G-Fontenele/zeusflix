@@ -39,7 +39,7 @@ function VideoRegister() {
   };
 
   return(
-    <PageDefault>
+    <PageDefault to='/register/category' text='Nova Categoria'> 
       <h1>Cadastro de Vídeo: {values.title}</h1>
       <form onSubmit = {(event) => {
         event.preventDefault();

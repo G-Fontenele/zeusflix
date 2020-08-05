@@ -6,15 +6,15 @@ import './Menu.css';
 import ButtonLink from './components/ButtonLink';
 import ButtonMenu from '../Button/ButtonMenu';
 
-function Menu() {
+function Menu({to, text}) {
   return (
     <nav className="Menu">
       <Link to="/">
         <img className="Logo" src={zeusflixLogo} alt="zeusflix logo" />
       </Link>
 
-      <ButtonMenu as={Link} className="ButtonLink" to="/register/video">
-        Novo Vídeo
+      <ButtonMenu as={Link} className="ButtonLink" to={to}>
+        {text}
       </ButtonMenu>
     </nav>
   );

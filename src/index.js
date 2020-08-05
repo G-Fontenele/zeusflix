@@ -22,7 +22,7 @@ ReactDOM.render(
       <Route path = '/register/video' component = {VideoRegister} />
       <Route path = '/register/category' component = {CategoryRegister} />
       {/*<Route path = '/player' component = {PlayerPage({title, url})} />*/}
-      <Route exact path='/player' render={(props) => <PlayerPage {...props} title={`Props through render`} url={'https://www.youtube.com/watch?v=_nBlN9yp9R8&list=WL&index=2'}/>} />
+      <Route exact path='/player/:video_id/:title' component = {PlayerPage}/>
       <Route path = '/user/login' component = {Login} />
       <Route path = '/user/register' component = {registerUser} />
       <Route component = {Error} /> 

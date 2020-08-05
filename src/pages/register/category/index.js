@@ -58,7 +58,7 @@ function CategoryRegister() {
   }
 
   return (
-    <PageDefault>
+    <PageDefault to='/register/video' text='Novo Vídeo'>
       <h1>
         Cadastro de Categoria: {values.title}
       </h1>
