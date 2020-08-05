@@ -33,7 +33,6 @@ function Home() {
 
   return (    
     <PageDefault to='/register/video' text='Novo Vídeo' paddingAll={0}>
-      <Menu />
 
       {initData.length === 0 && <div>
         <ColoredCircularProgress />

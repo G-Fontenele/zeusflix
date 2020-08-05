@@ -1,13 +1,24 @@
 .player-wrapper {
     position: relative;
     margin: auto;
-    padding: auto;
+    padding: 2rem;
+    display: flex;
   }
    
   .react-player {
     position: relative;
+    display: flex;
     margin: auto;
-    padding: auto;
     width: 100%;
     height: 100%;
+  }
+
+  .video-title {
+    position: relative;
+    padding-bottom: 1rem;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    font-weight: 800;
+    color: var(--primary);
   }

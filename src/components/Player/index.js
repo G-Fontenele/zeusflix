@@ -20,7 +20,7 @@ const opts = {
 function Player({ url, title }) {
   return (
       <>
-      <h1>
+      <h1 className='video-title'>
         {title}
       </h1>
         <div className='player-wrapper'>
