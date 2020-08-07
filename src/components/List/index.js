@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export const List = styled.ul`
   list-style-type: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   span {
     font-weight: bold;
     margin-right: 1rem;

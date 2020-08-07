@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Title = styled.h3`
   font-style: normal;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 1rem;
   display: inline-block;
-  padding: 8px;
+  padding: 1px;
   line-height: 1;
   border-radius: 2px;
 
@@ -20,8 +20,9 @@ export const Title = styled.h3`
 export const ExtraLink = styled.a`
   margin-left: 15px;
   font-weight: bold;
+  font-size: 0.8rem;
   text-decoration: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
   transition: opacity .3s;
   &:hover,

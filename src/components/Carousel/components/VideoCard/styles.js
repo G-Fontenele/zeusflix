@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const VideoCardContainer = styled.a`
   border-radius: 0px;
+  border: 1px solid {category.color};
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;

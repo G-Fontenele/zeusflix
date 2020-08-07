@@ -19,7 +19,6 @@ function Carousel({
       {categoryTitle && (
         <>
         <ContainerDiv>
-          <ColorDiv color={categoryColor}/>
             <Title style={{ color: categoryColor || 'red' }}>
               {categoryTitle}
             </Title>
