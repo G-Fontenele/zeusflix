@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Acessing Project
+
+Use the link https://zeusflix.vercel.app/ to acess this project online page.
+
 ## Available Scripts
 
 In the project directory, you can run:
